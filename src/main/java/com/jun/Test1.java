@@ -48,6 +48,11 @@ public class Test1 {
         System.out.println(collectList2);
         System.out.println(collectList3);
         System.out.println(collectList4);
+        System.out.println("-------------------------------------");
+
+        //peek的用法
+        List<RatePlan> collect = list.stream().peek(ratePlan -> ratePlan.setScore(1000)).collect(Collectors.toList());
+        System.out.println(collect);
     }
 
     public static class RatePlan{
@@ -95,6 +100,34 @@ public class Test1 {
 
         public Integer getScore() {
             return score;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        public void setPropertyId(String propertyId) {
+            this.propertyId = propertyId;
+        }
+
+        public void setRoomId(String roomId) {
+            this.roomId = roomId;
+        }
+
+        public void setRoomName(String roomName) {
+            this.roomName = roomName;
+        }
+
+        public void setRateId(String rateId) {
+            this.rateId = rateId;
+        }
+
+        public void setMerchantOfRecord(String merchantOfRecord) {
+            this.merchantOfRecord = merchantOfRecord;
+        }
+
+        public void setScore(Integer score) {
+            this.score = score;
         }
 
         @Override
